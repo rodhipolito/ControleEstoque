@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="exemple.estoque.DashboardController" spacing="10" style="-fx-padding: 10;">
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="10" minWidth="200">
+            <Label text="Entrada de Produto:" />
+            <HBox spacing="10">
+                <TextField fx:id="nomeProdutoEntradaField" promptText="Nome do Produto" />
+                <TextField fx:id="quantidadeProdutoEntradaField" promptText="Quantidade" />
+                <Button text="Registrar Entrada" onAction="#registrarEntrada" />
+            </HBox>
+        </VBox>
+
+        <!-- Separador entre Entrada e Saída -->
+        <Separator orientation="VERTICAL" />
+
+        <VBox spacing="10" minWidth="200">
+            <Label text="Saída de Produto:" />
+            <HBox spacing="10">
+                <TextField fx:id="nomeProdutoSaidaField" promptText="Nome do Produto" />
+                <TextField fx:id="quantidadeProdutoSaidaField" promptText="Quantidade" />
+                <Button text="Registrar Saída" onAction="#registrarSaida" />
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <Label text="Estoque Atual:" />
+    <ListView fx:id="produtosListView" />
+
+    <Label fx:id="estoqueStatusLabel" text="Estoque status" />
+
+    <Label text="Histórico de Movimentações:" />
+    <TextArea fx:id="historicoTextArea" editable="false" />
+</VBox>
