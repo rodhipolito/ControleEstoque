@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="238.0" prefWidth="245.0" spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="exemple.estoque.LoginController">
+    <Label text="Usuário:" />
+    <TextField fx:id="usernameField" promptText="Digite seu nome de usuário" />
+
+    <Label text="Senha:" />
+    <PasswordField fx:id="passwordField" promptText="Digite sua senha" />
+
+    <Button fx:id="loginButton" onAction="#handleLogin" prefWidth="100" text="Login" />
+</VBox>
