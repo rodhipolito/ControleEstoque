@@ -19,6 +19,7 @@ O Sistema de Gestão de Estoque é uma aplicação desenvolvida em Java, utiliza
 - Java
 - JavaFX
 - IDE: IntelliJ IDEA
+- SceneBuilder
 
 ## Contribuições
 
