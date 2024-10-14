@@ -22,7 +22,7 @@ public class Main extends Application {
 
             // Definir a cena e exibir a tela de login
             primaryStage.setScene(new Scene(root));
-            primaryStage.setTitle("Sistema de Gestão de Estoque"); // Altere aqui para o título desejado
+            primaryStage.setTitle("Sistema de Gestão de Estoque");
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,7 +46,7 @@ public class Main extends Application {
 
             // Definir a nova cena para o dashboard e exibir
             stage.setScene(new Scene(root));
-            stage.setTitle("Painel de Controle"); // Altere aqui para o título desejado no Dashboard
+            stage.setTitle("Painel de Controle");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

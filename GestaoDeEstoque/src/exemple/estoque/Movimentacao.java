@@ -7,11 +7,11 @@ public class Movimentacao {
     private List<String> historico;
 
     public Movimentacao() {
-        this.historico = new ArrayList<>();
+        historico = new ArrayList<>();
     }
 
-    public void registrarMovimentacao(String tipo, String produto, int quantidade) {
-        String registro = tipo + ": " + produto + " - " + quantidade + " unidades";
+    public void registrarMovimentacao(String tipo, String nomeProduto, int quantidade) {
+        String registro = tipo + ": " + nomeProduto + " - " + quantidade + " unidades.";
         historico.add(registro);
     }
 
