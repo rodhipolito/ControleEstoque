@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="534.0" prefWidth="657.0" spacing="10" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exemple.estoque.DashboardController">
+
+    <!-- Campo de Pesquisa -->
+    <HBox spacing="10">
+        <Label text="Pesquisar Produto:" />
+        <TextField fx:id="pesquisaProdutoField" onKeyReleased="#pesquisarProduto" prefWidth="200.0" promptText="Digite para buscar..." />
+        <Button onAction="#eliminarItem" text="Eliminar Item" />
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Entrada de Produto:" />
+            <HBox spacing="10">
+                <TextField fx:id="nomeProdutoEntradaField" promptText="Nome do Produto" />
+                <TextField fx:id="quantidadeProdutoEntradaField" prefHeight="25.0" prefWidth="58.0" promptText="Un." />
+                <Button onAction="#registrarEntrada" text="Registrar Entrada" />
+            </HBox>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Saída de Produto:" />
+            <HBox spacing="10">
+                <TextField fx:id="nomeProdutoSaidaField" prefHeight="25.0" prefWidth="112.0" promptText="Nome do Produto" />
+                <TextField fx:id="quantidadeProdutoSaidaField" prefHeight="25.0" prefWidth="40.0" promptText="Un." />
+                <Button onAction="#registrarSaida" text="Registrar Saída" />
+            </HBox>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10">
+
+        <Label prefHeight="17.0" prefWidth="141.0" text="Adicionar Novo Item:" />
+        <TextField fx:id="nomeProdutoField" prefHeight="25.0" prefWidth="115.0" promptText="Nome do Produto" />
+        <TextField fx:id="quantidadeProdutoField" prefHeight="25.0" prefWidth="60.0" promptText="Un." />
+        <TextField fx:id="precoProdutoField" prefHeight="25.0" prefWidth="65.0" promptText="Preço" />
+        <Button onAction="#adicionarNovoItem" text="Adicionar" />
+    </HBox>
+
+    <Label text="Estoque Atual:" />
+    <TableView fx:id="produtosTableView" prefHeight="225.0" prefWidth="641.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="54.0" text="ID" />
+            <TableColumn fx:id="nomeColumn" prefWidth="146.0" text="Produto" />
+            <TableColumn fx:id="quantidadeColumn" prefWidth="120.0" text="Quantidade" />
+            <TableColumn fx:id="precoColumn" prefWidth="151.0" text="Preço" />
+            <TableColumn fx:id="totalColumn" maxWidth="3000.0" prefWidth="165.0" text="Total" /> <!-- Adicionada coluna Total -->
+        </columns>
+    </TableView>
+
+    <Label fx:id="estoqueStatusLabel" text="Estoque status" />
+
+    <Label text="Histórico de Movimentações:" />
+    <TextArea fx:id="historicoTextArea" editable="false" prefHeight="200.0" prefWidth="655.0" />
+</VBox>
