@@ -12,6 +12,8 @@ O Sistema de Gestão de Estoque é uma aplicação desenvolvida em Java, utiliza
 - **Registro de Saída:** Permite remover unidades de um produto do estoque, verificando se há quantidade suficiente.
 - **Visualização do Estoque:** Apresenta uma lista atualizada dos produtos, suas quantidades e IDs.
 - **Histórico de Movimentações:** Mantém um registro das entradas e saídas de produtos, exibindo informações relevantes ao usuário.
+- **Adicionar Novo Item:** Adiciona novo item atribuindo novo ID sequencial. 
+- **Eliminar Item Estoque:** Elimina qualquer item do estoque, mantendo historico da eliminalção
 - **Alertas de Erros:** Utiliza janelas de alerta para informar o usuário sobre erros de entrada, como produtos não encontrados ou quantidades insuficientes.
 
 ## Tecnologias Utilizadas
